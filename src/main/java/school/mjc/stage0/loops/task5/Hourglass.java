@@ -6,17 +6,22 @@ public class Hourglass {
             for (int j = 0; j < i; j++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < 2 * (height - i) - 1; j++) {
+            for (int j = 0; j < height - i; j++) {
                 System.out.print("8");
             }
             System.out.println();
         }
 
-        for (int i = height - 2; i >= 0; i--) {
+        for (int i = 0; i < height; i++) {
+            System.out.print(" ");
+        }
+        System.out.println("8");
+
+        for (int i = height - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < 2 * (height - i) - 1; j++) {
+            for (int j = 0; j < height - i; j++) {
                 System.out.print("8");
             }
             System.out.println();
