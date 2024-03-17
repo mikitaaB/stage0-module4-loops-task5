@@ -1,26 +1,14 @@
 package school.mjc.stage0.loops.task5;
 
 public class Hourglass {
-    public void printHourglassOfGivenSize(int n) {
-        int half = n / 2;
-        for (int i = half; i >= 0; i--) {
-            int base = n % 2 == 0 ? (2 * i) : (2 * i + 1);
-            for (int j = half; j > i; j--) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < base; j++) {
-                System.out.print("8");
-            }
-            System.out.println();
-        }
-
-        for (int i = 1; i <= half; i++) {
-            int base = n % 2 == 0 ? (2 * i) : (2 * i + 1);
-            for (int j = half; j > i; j--) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < base; j++) {
-                System.out.print("8");
+    public void printHourglassOfGivenSize(int height) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < height; j++) {
+                if (i + j < height - 1 && i > j || i + j > height - 1 && i < j) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("8");
+                }
             }
             System.out.println();
         }
